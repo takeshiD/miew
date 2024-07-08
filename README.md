@@ -2,9 +2,9 @@
 markdown preview tool
 
 # Features
-* Selectable parser, render, destination target
+* Selectable parser, render, destination(browser, terminal, etc...)
 * Support mermaid-syntax code block
-
+* 
 
 # Installation
 sorry not yet prepared
