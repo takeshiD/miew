@@ -5,4 +5,3 @@ edition = "2021"
 
 [dependencies]
 markdown = "1.0.0-alpha.18"
-markdown-rs = "0.1.0"
