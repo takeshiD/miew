@@ -1,0 +1,221 @@
+Root {
+    children: [
+        Heading {
+            children: [
+                Text {
+                    value: "miew",
+                    position: Some(
+                        1:3-1:7 (2-6),
+                    ),
+                },
+            ],
+            position: Some(
+                1:1-1:7 (0-6),
+            ),
+            depth: 1,
+        },
+        Paragraph {
+            children: [
+                Text {
+                    value: "miew is markdown previewer.",
+                    position: Some(
+                        2:1-2:28 (7-34),
+                    ),
+                },
+            ],
+            position: Some(
+                2:1-2:28 (7-34),
+            ),
+        },
+        Heading {
+            children: [
+                Text {
+                    value: "Features",
+                    position: Some(
+                        4:4-4:12 (39-47),
+                    ),
+                },
+            ],
+            position: Some(
+                4:1-4:12 (36-47),
+            ),
+            depth: 2,
+        },
+        Paragraph {
+            children: [
+                Text {
+                    value: "miew has several great features.",
+                    position: Some(
+                        6:1-6:33 (49-81),
+                    ),
+                },
+            ],
+            position: Some(
+                6:1-6:33 (49-81),
+            ),
+        },
+        List {
+            children: [
+                ListItem {
+                    children: [
+                        Paragraph {
+                            children: [
+                                Text {
+                                    value: "selectable paser, renderer, draweer",
+                                    position: Some(
+                                        7:3-7:38 (84-119),
+                                    ),
+                                },
+                            ],
+                            position: Some(
+                                7:3-7:38 (84-119),
+                            ),
+                        },
+                    ],
+                    position: Some(
+                        7:1-7:38 (82-119),
+                    ),
+                    spread: false,
+                    checked: None,
+                },
+                ListItem {
+                    children: [
+                        Paragraph {
+                            children: [
+                                Text {
+                                    value: "every module is avilability reused",
+                                    position: Some(
+                                        8:3-8:37 (122-156),
+                                    ),
+                                },
+                            ],
+                            position: Some(
+                                8:3-8:37 (122-156),
+                            ),
+                        },
+                    ],
+                    position: Some(
+                        8:1-8:37 (120-156),
+                    ),
+                    spread: false,
+                    checked: None,
+                },
+                ListItem {
+                    children: [
+                        Paragraph {
+                            children: [
+                                Text {
+                                    value: "support mermaid-syntax",
+                                    position: Some(
+                                        9:3-9:25 (159-181),
+                                    ),
+                                },
+                            ],
+                            position: Some(
+                                9:3-9:25 (159-181),
+                            ),
+                        },
+                    ],
+                    position: Some(
+                        9:1-9:25 (157-181),
+                    ),
+                    spread: false,
+                    checked: None,
+                },
+            ],
+            position: Some(
+                7:1-9:25 (82-181),
+            ),
+            ordered: false,
+            start: None,
+            spread: false,
+        },
+        Code {
+            value: "sequenceDiagram\n\tAlice -> Bob: Hello Bob!\n\tBob -> Alice: Hello Alice",
+            position: Some(
+                10:1-14:4 (182-265),
+            ),
+            lang: Some(
+                "mermaid",
+            ),
+            meta: None,
+        },
+        List {
+            children: [
+                ListItem {
+                    children: [
+                        Paragraph {
+                            children: [
+                                Text {
+                                    value: "support katex-syntax\n$$\nf(x) = 1 + x / ( 1 + x)\n$$",
+                                    position: Some(
+                                        15:3-18:3 (268-318),
+                                    ),
+                                },
+                            ],
+                            position: Some(
+                                15:3-18:3 (268-318),
+                            ),
+                        },
+                    ],
+                    position: Some(
+                        15:1-19:1 (266-319),
+                    ),
+                    spread: false,
+                    checked: None,
+                },
+            ],
+            position: Some(
+                15:1-19:1 (266-319),
+            ),
+            ordered: false,
+            start: None,
+            spread: false,
+        },
+        Heading {
+            children: [
+                Text {
+                    value: "miew architecture",
+                    position: Some(
+                        20:4-20:21 (323-340),
+                    ),
+                },
+            ],
+            position: Some(
+                20:1-20:21 (320-340),
+            ),
+            depth: 2,
+        },
+        Paragraph {
+            children: [
+                Text {
+                    value: "see following url\n",
+                    position: Some(
+                        21:1-22:1 (341-359),
+                    ),
+                },
+                Link {
+                    children: [
+                        Text {
+                            value: "miew Architecture",
+                            position: Some(
+                                22:2-22:19 (360-377),
+                            ),
+                        },
+                    ],
+                    position: Some(
+                        22:1-22:76 (359-434),
+                    ),
+                    url: "https://github.com/takeshiD/miew/miew_architecture.svg",
+                    title: None,
+                },
+            ],
+            position: Some(
+                21:1-22:76 (341-434),
+            ),
+        },
+    ],
+    position: Some(
+        1:1-23:1 (0-435),
+    ),
+}
