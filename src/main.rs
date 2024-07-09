@@ -1,3 +1,8 @@
+mod parser;
+mod renderer;
+mod drawer;
+mod config;
+
 use std::path::PathBuf;
 use clap::{Parser, ValueEnum};
 
@@ -13,16 +18,23 @@ enum Destination {
 struct Args {
     src: PathBuf,
     #[arg(value_enum, default_value_t = Destination::Terminal)]
-    dst: Destination
+    dst: Destination,
+    #[arg(short, long)]
+    config: Option<PathBuf>,
 }
-mod render;
+
 fn main() {
     let args = Args::parse();
-    use markdown::{to_mdast, ParseOptions};
-    use std::fs::File;
-    use std::io::prelude::Read;
-    let mut src = File::open(args.src).expect("file not found");
-    let mut content = String::new();
-    src.read_to_string(&mut content).unwrap();
-    println!("{:#?}", to_mdast(content.as_str(), &ParseOptions::default()).unwrap());
+    let src = args.src;
+    let dst = args.dst;
+    let mut config = Config::default();
+    if let Some(config_path) = args.config {
+        match config.load(config_path) {
+            Ok(()) => (),
+            Err(e) => panic!("Failed open '{config_path}'. speacified path is not exisited or allow permission."),
+        }
+    }
+    let mdast = parser::Parser(config);
+    let rendertree = renderer::Renderer(config);
+
 }
